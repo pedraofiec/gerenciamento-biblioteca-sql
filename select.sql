@@ -1,9 +1,11 @@
-SELECT * FROM Usuarios;
+SELECT e.id_emprestimo, l.titulo, e.data_emprestimo, e.data_devolucao, e.status
+FROM emprestimos e
+JOIN livros l ON e.id_livro = l.id_livro;
 
-SELECT COUNT(id_usuario) AS total_usuarios_com_telefone
-FROM Usuarios
-WHERE telefone IS NOT NULL;
+SELECT id_emprestimo, id_livro, data_emprestimo, status
+FROM emprestimos
+WHERE data_devolucao IS NULL;
 
-SELECT nome, email, telefone
-FROM Usuarios
-WHERE nome LIKE 'Carlos%';
+SELECT COUNT(*) AS total_atrasados
+FROM emprestimos
+WHERE status = 'atrasado';
