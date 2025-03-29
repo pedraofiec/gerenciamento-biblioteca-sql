@@ -1,7 +1,5 @@
-CREATE TABLE Autores (
-    id_autor INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE Usuarios (
+    id_usuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
-    sobrenome VARCHAR(100) NOT NULL,
-    data_nascimento DATE NOT NULL,           
-    nacionalidade VARCHAR(100) NOT NULL 
-);
+    email VARCHAR(100) UNIQUE NOT NULL,
+    telefone VARCHAR(20));

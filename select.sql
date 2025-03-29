@@ -1,9 +1,9 @@
-SELECT * FROM Autores;
+SELECT * FROM Usuarios;
 
-SELECT nacionalidade, COUNT(id_autor) AS quantidade_autores
-FROM Autores
-GROUP BY nacionalidade;
+SELECT COUNT(id_usuario) AS total_usuarios_com_telefone
+FROM Usuarios
+WHERE telefone IS NOT NULL;
 
-SELECT nome, sobrenome, data_nascimento
-FROM Autores
-WHERE data_nascimento < '1900-01-01';
+SELECT nome, email, telefone
+FROM Usuarios
+WHERE nome LIKE 'Carlos%';
