@@ -1,3 +1,4 @@
+
 INSERT INTO emprestimos (id_emprestimo, id_livro, data_emprestimo, data_devolucao, status) VALUES
 (1, 1, '2024-03-01', '2024-03-10', 'devolvido'),
 (2, 2, '2024-03-05', NULL, 'emprestado'),

@@ -9,4 +9,3 @@ WHERE data_devolucao IS NULL;
 SELECT COUNT(*) AS total_atrasados
 FROM emprestimos
 WHERE status = 'atrasado';
-

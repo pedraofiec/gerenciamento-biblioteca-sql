@@ -1,3 +1,4 @@
+
 CREATE TABLE emprestimos (
     id_emprestimo INT PRIMARY KEY IDENTITY(1,1),
     id_livro INT NOT NULL,
